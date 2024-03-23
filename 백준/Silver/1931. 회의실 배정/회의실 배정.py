@@ -1,9 +1,10 @@
+import sys
 N = int(input())
 
 ary = []
 
 for i in range(N):
-    start, end = map(int, input().split())
+    start, end = map(int, sys.stdin.readline().rstrip().split())
     ary.append((start,end))
 
 ary.sort(key = lambda x: (x[1], x[0])) #회의가 가장 빨리 끝나는걸로 정렬, 그중에서 빨리 시작하는애들로 정렬
